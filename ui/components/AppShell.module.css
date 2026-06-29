@@ -1,0 +1,66 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  background: var(--color-white);
+}
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* 내 단어 추가 후 단독 훈련 헤더 */
+.standalone {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: none;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 2px solid var(--color-hairline);
+  background: var(--color-white);
+}
+.backBtn {
+  border: none;
+  background: none;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--color-eel-grey);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.standaloneTitle {
+  font-size: var(--font-size-lead);
+  font-weight: 700;
+  color: var(--color-eel-grey);
+}
+
+/* 나의 인지근육 — 준비 중 */
+.soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-5);
+  text-align: center;
+}
+.soonChar {
+  width: 140px;
+  height: 140px;
+}
+.soonTitle {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  color: var(--color-eel-grey);
+}
+.soonSub {
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+}

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(npm test *)",
+      "Bash(tee __TRACKED_VAR__/lexi-dev.log)",
+      "Skill(browse)",
+      "WebSearch",
+      "WebFetch(domain:www.themoviedb.org)",
+      "Bash(curl -sL -o public/cards/maljukgeori-janhoksa.jpg \"https://image.tmdb.org/t/p/w500/9h0Pos3Ydu1TkO9vtFOs45osdLB.jpg\")",
+      "Bash(break)",
+      "Bash(curl -sL -o public/cards/project-hail-mary.jpg \"https://image.tmdb.org/t/p/w500/qqGpVVZk2KD1lAvccgTU4Z6nh1H.jpg\")",
+      "Bash(ls -la *.png *.jpg *.jpeg *.webp)",
+      "Bash(find . \"../\" -maxdepth 2 \\\\\\( -iname \"*아쿠아*\" -o -iname \"*aqua*\" \\\\\\))",
+      "Bash(find . -maxdepth 1 -iname \"*큰눈*\")",
+      "Bash(ls -la *큰눈*)",
+      "Bash(python -)",
+      "Bash(sort -k6)",
+      "Bash(python -m pip install --quiet rembg onnxruntime)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(python -c \"import rembg; print\\('rembg OK'\\)\")",
+      "Bash(ls -la *.png *.jpg *.jpeg *.jfif *.webp *.pdf)",
+      "Bash(ls \"여신에니메이션\")",
+      "Bash(rm -rf \"오류.jpg\" \"말죽거리잔혹사 사진.jpg\" \"여신.png\" \"여신－머리카락가닥.png\" \"여신에니메이션\")",
+      "Bash(ls -la *.png *.jpg *.jpeg *.jfif *.pdf)",
+      "Bash(ls -d */)",
+      "WebFetch(domain:www.duolingo.com)",
+      "Bash(python -c \"import json;d=json.load\\(open\\('content/packs/movies.ko.json',encoding='utf-8'\\)\\);[print\\(c['answer']['primary'],'→ 힌트',len\\(c['hints']\\),'개 / level1 pieces',c['hints'][0]['pieces'],'/ level2 pieces',c['hints'][1]['pieces']\\) for c in d['cards']]\")",
+      "Bash(python -c \"import json;d=json.load\\(open\\('content/packs/movies.ko.json',encoding='utf-8'\\)\\);[print\\(c['id'],'hints=',len\\(c['hints']\\),'levels=',[h['level'] for h in c['hints']],'kinds=',[h['kind'] for h in c['hints']]\\) for c in d['cards']]\")",
+      "PowerShell($ErrorActionPreference='Continue'; Write-Output \"=== git ===\"; \\(Get-Command git -ErrorAction SilentlyContinue\\).Source; Write-Output \"=== gh ===\"; \\(Get-Command gh -ErrorAction SilentlyContinue\\).Source; Write-Output \"=== gitignore exists ===\"; Test-Path \".gitignore\"; Write-Output \"=== node ===\"; node -v)",
+      "PowerShell(npm run *)"
+    ]
+  }
+}

@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>므네모 — Memory Economy (16:9)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #2c2c2c;
+        --ink-soft: #6b6b6b;
+        --line: #e7e3da;
+        --paper: #fbfaf7;
+        --sage: #8a9a6e;
+        --sage-deep: #5f6f45;
+        --gold: #c2a86a;
+        --green: #58cc02;
+        --red: #e06a5a;
+        --serif: "Gowun Batang", serif;
+        --sans: "Pretendard Variable", Pretendard, system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        background: #d9d4c8;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+      }
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: var(--paper);
+        padding: 72px 84px 64px;
+        display: flex;
+        gap: 70px;
+        overflow: hidden;
+      }
+      .slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: linear-gradient(90deg, var(--sage), var(--gold));
+      }
+
+      /* 왼쪽 — 메시지 */
+      .left {
+        width: 980px;
+        display: flex;
+        flex-direction: column;
+      }
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: var(--sage-deep);
+        text-transform: uppercase;
+      }
+      .kicker::before {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background: var(--gold);
+      }
+      h1 {
+        font-family: var(--serif);
+        font-size: 68px;
+        font-weight: 700;
+        line-height: 1.04;
+        margin: 16px 0 8px;
+        letter-spacing: -1px;
+      }
+      h1 .em {
+        color: var(--sage-deep);
+      }
+      .sub {
+        font-size: 22px;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+      .thesis {
+        margin: 26px 0 28px;
+        padding: 22px 26px;
+        background: linear-gradient(135deg, #f3f1e7, #eef2e6);
+        border: 1px solid var(--line);
+        border-left: 6px solid var(--sage);
+        border-radius: 16px;
+        font-size: 19px;
+        line-height: 1.65;
+        font-weight: 500;
+      }
+      .thesis b {
+        color: var(--sage-deep);
+        font-weight: 800;
+      }
+
+      .compare {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .col {
+        border-radius: 18px;
+        padding: 20px 20px 22px;
+        border: 1px solid var(--line);
+      }
+      .col.old {
+        background: #faf6f4;
+        border-color: #f0ddd7;
+      }
+      .col.new {
+        background: #f1f7ea;
+        border-color: #dcebc6;
+      }
+      .col .tag {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .col.old .tag {
+        color: var(--red);
+      }
+      .col.new .tag {
+        color: var(--sage-deep);
+      }
+      .col h3 {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 5px 0 12px;
+      }
+      .flow {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .flow li {
+        font-size: 15.5px;
+        font-weight: 600;
+        padding: 10px 13px;
+        border-radius: 11px;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+      .col.old .flow li {
+        color: #8a5a50;
+      }
+      .col.new .flow li {
+        color: var(--sage-deep);
+      }
+      .flow .arrow {
+        text-align: center;
+        background: none;
+        border: none;
+        padding: 0;
+        color: var(--ink-soft);
+      }
+      .col.new .flow .hit {
+        background: var(--green);
+        color: #fff;
+        border-color: var(--green);
+        font-weight: 800;
+      }
+
+      .tagline {
+        margin-top: auto;
+        padding-top: 26px;
+      }
+      .tagline .big {
+        font-family: var(--serif);
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .tagline .big .em {
+        color: var(--sage-deep);
+      }
+      .tagline .kr {
+        font-size: 17px;
+        color: var(--ink-soft);
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      /* 오른쪽 — 플라이휠 */
+      .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .wheel-label {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        color: var(--gold);
+        margin-bottom: 6px;
+      }
+      .wheel {
+        position: relative;
+        width: 720px;
+        height: 720px;
+      }
+      .wheel svg {
+        position: absolute;
+        inset: 0;
+      }
+      .node {
+        position: absolute;
+        width: 200px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background: #fff;
+        border: 2px solid var(--sage);
+        border-radius: 16px;
+        padding: 13px 14px;
+        box-shadow: 0 10px 22px rgba(95, 111, 69, 0.13);
+      }
+      .node .n {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--sage);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        margin-bottom: 7px;
+      }
+      .node p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+      .node small {
+        display: block;
+        font-size: 12.5px;
+        color: var(--ink-soft);
+        font-weight: 600;
+        margin-top: 3px;
+      }
+      .hub {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 38%, #fff, #f3f1e7);
+        border: 2px dashed var(--gold);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .hub .glyph {
+        font-size: 44px;
+        margin-bottom: 6px;
+      }
+      .hub .t {
+        font-family: var(--serif);
+        font-size: 29px;
+        font-weight: 700;
+        color: var(--sage-deep);
+        line-height: 1.1;
+      }
+      .hub .s {
+        font-size: 13px;
+        color: var(--ink-soft);
+        font-weight: 600;
+        margin-top: 5px;
+        letter-spacing: 2px;
+      }
+      .foot {
+        position: absolute;
+        right: 84px;
+        bottom: 30px;
+        font-size: 14px;
+        color: var(--ink-soft);
+        font-weight: 600;
+      }
+      .foot .brand {
+        font-family: var(--serif);
+        color: var(--sage-deep);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <div class="left">
+        <div class="kicker">므네모 · MNEMO</div>
+        <h1>From Attention<br />to <span class="em">Memory Economy</span></h1>
+        <p class="sub">관심을 빼앗는 광고에서, 기억을 되살리는 단서로.</p>
+
+        <div class="thesis">
+          기존 플랫폼은 <b>Attention Economy</b>를 구축했습니다. 우리는
+          <b>Memory Economy</b>를 구축합니다. 브랜드는 주의를 빼앗는 광고가
+          아니라, 소비자의 <b>기억을 되살리는 단서</b>가 됩니다.
+        </div>
+
+        <div class="compare">
+          <div class="col old">
+            <div class="tag">Attention Economy</div>
+            <h3>관심을 뺏는다</h3>
+            <ul class="flow">
+              <li>브랜드가 광고를 노출</li>
+              <li class="arrow">↓</li>
+              <li>사용자는 광고를 피한다</li>
+              <li class="arrow">↓</li>
+              <li>주의는 소모되고 사라진다</li>
+            </ul>
+          </div>
+          <div class="col new">
+            <div class="tag">Memory Economy</div>
+            <h3>기억을 되살린다</h3>
+            <ul class="flow">
+              <li>브랜드가 기억 단서를 제공</li>
+              <li class="arrow">↓</li>
+              <li>사용자는 경험을 회상한다</li>
+              <li class="arrow">↓</li>
+              <li class="hit">브랜드가 기억의 일부가 된다</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tagline">
+          <div class="big">
+            We don't show ads.
+            <span class="em">We activate memories.</span>
+          </div>
+          <div class="kr">Every brand becomes someone's memory.</div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="wheel-label">THE MEMORY FLYWHEEL · 기억 플라이휠</div>
+        <div class="wheel">
+          <svg viewBox="0 0 720 720" aria-hidden="true">
+            <circle
+              cx="360"
+              cy="360"
+              r="242"
+              fill="none"
+              stroke="#d9cfb4"
+              stroke-width="3"
+              stroke-dasharray="2 12"
+              stroke-linecap="round"
+            />
+            <g
+              fill="#c2a86a"
+              font-size="24"
+              font-family="Pretendard, sans-serif"
+              text-anchor="middle"
+              dominant-baseline="central"
+            >
+              <text x="481" y="151" transform="rotate(30 481 151)">▶</text>
+              <text x="602" y="360" transform="rotate(90 602 360)">▶</text>
+              <text x="481" y="569" transform="rotate(150 481 569)">▶</text>
+              <text x="239" y="569" transform="rotate(210 239 569)">▶</text>
+              <text x="118" y="360" transform="rotate(270 118 360)">▶</text>
+              <text x="239" y="151" transform="rotate(330 239 151)">▶</text>
+            </g>
+          </svg>
+
+          <div class="hub">
+            <div class="glyph">🧠</div>
+            <div class="t">Memory<br />Flywheel</div>
+            <div class="s">자기강화 선순환</div>
+          </div>
+
+          <div class="node" style="left: 360px; top: 118px">
+            <span class="n">1</span>
+            <p>브랜드가 기억 단서 제공</p>
+            <small>영화 · 책 · 제품 · 음식</small>
+          </div>
+          <div class="node" style="left: 570px; top: 239px">
+            <span class="n">2</span>
+            <p>사용자가 자신의 경험을 회상</p>
+          </div>
+          <div class="node" style="left: 570px; top: 481px">
+            <span class="n">3</span>
+            <p>기억 · 브랜드 연상이 강화</p>
+          </div>
+          <div class="node" style="left: 360px; top: 602px">
+            <span class="n">4</span>
+            <p>이용 시간 · 회상 성공률 증가</p>
+          </div>
+          <div class="node" style="left: 150px; top: 481px">
+            <span class="n">5</span>
+            <p>브랜드 협찬 증가</p>
+          </div>
+          <div class="node" style="left: 150px; top: 239px">
+            <span class="n">6</span>
+            <p>더 많은 기억 콘텐츠 · 사용자</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <span class="brand">므네모 — Mnemo</span> · Memory Economy
+      </div>
+    </div>
+  </body>
+</html>

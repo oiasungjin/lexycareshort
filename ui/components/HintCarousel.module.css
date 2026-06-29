@@ -1,0 +1,79 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.swipe {
+  touch-action: pan-y; /* 가로 스와이프 제스처를 위해 세로 스크롤만 허용 */
+}
+
+/* 그림 위 좌우 화살표(캔버스에 겹쳐짐) */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-overlay-light);
+  color: var(--color-eel-grey);
+  font-size: 30px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-float);
+  -webkit-tap-highlight-color: transparent;
+}
+.arrow:active {
+  transform: translateY(-50%) scale(0.92);
+}
+/* "힌트" CTA 버튼 — 오렌지 3D, 발견성 강조 */
+.hintBtn {
+  width: auto;
+  height: auto;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-white);
+  background: var(--color-bee-orange);
+  border-bottom: 3px solid var(--color-bee-orange-dark);
+  box-shadow: var(--shadow-float);
+}
+.hintBtn:active {
+  transform: translateY(-50%) translateY(2px);
+  border-bottom-width: 1px;
+}
+
+.left {
+  left: var(--space-1);
+}
+.right {
+  right: var(--space-1);
+}
+
+/* 단계 표시 점 */
+.dots {
+  display: flex;
+  gap: var(--space-1);
+  justify-content: center;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-hairline);
+  transition: all 0.2s ease;
+}
+.dotActive {
+  width: 22px;
+  background: var(--color-sky-blue);
+}

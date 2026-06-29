@@ -1,0 +1,63 @@
+.tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.marble {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--color-hairline); /* 빈 슬롯 */
+}
+
+.filled {
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--color-marble-light),
+    var(--color-sky-blue)
+  );
+  box-shadow: var(--shadow-marble-inset);
+}
+
+/* 방금 채워진 구슬: 팝 */
+.pop {
+  animation: pop 0.35s ease;
+}
+
+/* 방금 잃은 자리: 비어있는 점선 슬롯(낙인 대신 중립적으로) */
+.cracked {
+  background: transparent;
+  border: 2px dashed var(--color-cardinal-red);
+  opacity: 0.55;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+.shake {
+  animation: shake 0.4s ease;
+}

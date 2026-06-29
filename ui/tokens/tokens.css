@@ -1,0 +1,82 @@
+/* ui/tokens — 디자인 토큰 단일 출처 (Duolingo 스타일).
+   모든 디자인 값은 여기에만. 컴포넌트에 색·여백·폰트 리터럴 하드코딩 금지.
+   시장조사 후 디자인 교체 = 이 파일(+ 컴포넌트 소수) 수정으로 끝나게 한다. */
+
+:root {
+  /* 컬러 팔레트 */
+  --color-feather-green: #58cc02; /* 성공/정답 */
+  --color-feather-green-dark: #46a302; /* 정답 버튼 입체 하단 */
+  --color-sky-blue: #1cb0f6; /* 메인 브랜드/확인 버튼/프로그레스 */
+  --color-sky-blue-dark: #1899d6;
+  --color-bee-orange: #ff9600; /* 힌트/경고 */
+  --color-bee-orange-dark: #e08600;
+  --color-cardinal-red: #ff4b4b; /* 오답 */
+  --color-cardinal-red-dark: #e63946;
+  /* 피드백 바 배경 틴트(연한 버전) — Duolingo 체크 화면용 */
+  --color-feather-green-tint: #d7ffb8;
+  --color-cardinal-red-tint: #ffdfe0;
+  --color-bee-orange-tint: #fff0d6;
+  --color-sky-blue-tint: #ddf4ff;
+  /* 포스터형 힌트 캔버스 그라디언트 */
+  --surface-poster-top: #fafafa;
+  --surface-poster-bottom: #eef2f5;
+  /* 그림 위 화살표 오버레이 */
+  --color-overlay-light: rgba(255, 255, 255, 0.88);
+  --shadow-float: 0 2px 6px rgba(0, 0, 0, 0.15);
+  /* 구슬(리워드) */
+  --color-marble-light: #7fd4ff;
+  --shadow-marble-inset: inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+  /* 스플래시(로딩) — 흰 배경, 맑은 구슬 */
+  --goddess-skin: rgb(245, 228, 212); /* 여신 얼굴 피부색(눈 깜빡임 눈꺼풀용) */
+  --splash-glow: rgba(120, 200, 255, 0.85);
+  --marble-glass: rgba(160, 215, 255, 0.4);
+  --marble-rim: rgba(28, 176, 246, 0.4);
+  --color-eel-grey: #4b4b4b; /* 메인 텍스트 */
+  --color-eel-grey-soft: #777777; /* 보조 텍스트 */
+  --color-polar-light: #f7f7f7; /* 전체 배경/비활성 칩 */
+  --color-hairline: #e5e5e5; /* 옅은 경계선 */
+  --color-locked: #b4b4b4; /* 잠긴(프리미엄) 메뉴 회색 */
+  --color-white: #ffffff;
+
+  /* 라운딩 — 날카로운 직각 전면 금지 */
+  --radius-card: 16px;
+  --radius-chip: 12px;
+  --radius-pill: 999px;
+
+  --color-xp-gold: #ffc800; /* XP·별 */
+  --color-combo-purple: #ce82ff; /* 콤보 포인트 */
+
+  /* 3D 입체 버튼: 하단 보더 두께 */
+  --btn-depth: 4px;
+  --btn-depth-pressed: 2px;
+
+  /* 그림자 */
+  --shadow-card: 0 6px 18px rgba(75, 75, 75, 0.1);
+  --shadow-card-soft: 0 3px 10px rgba(75, 75, 75, 0.08);
+
+  /* 간격 */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  /* 타이포 — 모던·깔끔(Pretendard). 한글·라틴·숫자 통일. */
+  --font-family: "Pretendard Variable", "Pretendard", system-ui, -apple-system,
+    "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+  /* 브랜드(므네모) — 그림 분위기에 맞춘 우아한 명조 */
+  --font-brand: "Gowun Batang", "Nanum Myeongjo", serif;
+  --font-size-brand: 36px;
+  --brand-sage: #8a9a6e; /* 세이지 잎 톤 */
+  --brand-gold: #c2a86a; /* 금빛 포인트 톤 */
+  --font-size-caption: 14px;
+  --font-size-body: 16px;
+  --font-size-lead: 20px;
+  --font-size-title: 26px;
+  --font-weight-bold: 500;
+  --font-weight-semibold: 400;
+
+  /* 레이아웃 */
+  --content-max-width: 460px;
+}

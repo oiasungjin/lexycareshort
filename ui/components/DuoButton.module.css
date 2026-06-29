@@ -1,0 +1,72 @@
+.btn {
+  border: none;
+  border-radius: var(--radius-card);
+  color: var(--color-white);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.2px;
+  padding: 14px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.08s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.full {
+  width: 100%;
+}
+
+/* 3D 입체: 진한 하단 보더 → 누르면 Y축으로 내려앉음 */
+.primary {
+  background-color: var(--color-sky-blue);
+  border-bottom: var(--btn-depth) solid var(--color-sky-blue-dark);
+}
+.primary:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: var(--btn-depth-pressed);
+}
+
+.success {
+  background-color: var(--color-feather-green);
+  border-bottom: var(--btn-depth) solid var(--color-feather-green-dark);
+}
+.success:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: var(--btn-depth-pressed);
+}
+
+.warn {
+  background-color: var(--color-bee-orange);
+  border-bottom: var(--btn-depth) solid var(--color-bee-orange-dark);
+}
+.warn:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: var(--btn-depth-pressed);
+}
+
+.danger {
+  background-color: var(--color-cardinal-red);
+  border-bottom: var(--btn-depth) solid var(--color-cardinal-red-dark);
+}
+.danger:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: var(--btn-depth-pressed);
+}
+
+/* 보조 버튼: 흰 배경 + 옅은 보더 */
+.ghost {
+  background-color: var(--color-white);
+  color: var(--color-eel-grey);
+  border: 2px solid var(--color-hairline);
+  border-bottom: var(--btn-depth) solid var(--color-hairline);
+}
+.ghost:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: var(--btn-depth-pressed);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

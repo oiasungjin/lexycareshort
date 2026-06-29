@@ -1,0 +1,40 @@
+@import "../ui/tokens/tokens.css";
+
+* {
+  box-sizing: border-box;
+  /* 아주 옅고 얇은 스크롤바(눈에 띄지 않게) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.07) transparent;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.07);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-eel-grey);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}

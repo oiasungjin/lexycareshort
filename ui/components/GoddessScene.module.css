@@ -1,0 +1,169 @@
+.scene {
+  position: relative;
+  width: 176px;
+  height: 176px;
+}
+
+/* 머리 윗부분(12%)을 축으로 살짝 흔드는 래퍼 — 아래 긴 머리카락이 가장 많이 나부낌 */
+.figure {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 12%;
+  animation: sway 4.6s ease-in-out infinite;
+}
+
+.scene img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -webkit-user-drag: none;
+}
+
+.body {
+  z-index: 1;
+}
+
+/* 투명 구슬 — 스플래시 구슬과 동일한 모양/발광. 여신 주위를 부드럽게 떠다님 */
+.orbWrap {
+  position: absolute;
+  left: 43%;
+  top: 43%;
+  width: 14%;
+  height: 14%;
+  z-index: 4;
+  pointer-events: none;
+  transition: transform 0.65s cubic-bezier(0.33, 1.15, 0.5, 1);
+}
+.orb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.97),
+    var(--marble-glass) 52%,
+    transparent 84%
+  );
+  border: 1px solid var(--marble-rim);
+  box-shadow: var(--shadow-float), inset 0 0 8px rgba(255, 255, 255, 0.85);
+  animation: orbFlicker 1.4s ease-in-out infinite;
+}
+@keyframes orbFlicker {
+  0%,
+  100% {
+    opacity: 0.8;
+    box-shadow:
+      var(--shadow-float),
+      0 0 8px var(--splash-glow),
+      inset 0 0 8px rgba(255, 255, 255, 0.85);
+  }
+  50% {
+    opacity: 1;
+    box-shadow:
+      var(--shadow-float),
+      0 0 18px 3px var(--splash-glow),
+      inset 0 0 8px rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* 눈 레이어 — 눈높이(41.9%) 기준으로 세로 수축하며 깜빡임(감으면 base 피부가 보임) */
+.eyes {
+  z-index: 2;
+  transform-origin: 50% 41.9%;
+  animation: blink 6s ease-in-out infinite;
+}
+
+/* 바람결 머리카락: 머리 축으로 좌우로 천천히 기울었다 펴짐 */
+@keyframes sway {
+  0% {
+    transform: rotate(-1.6deg);
+  }
+  50% {
+    transform: rotate(1.6deg);
+  }
+  100% {
+    transform: rotate(-1.6deg);
+  }
+}
+
+/* 깜빡임: 더 잦고 다양하게 — 싱글 여러 번 + 더블(40·44%), 불규칙 간격 */
+@keyframes blink {
+  0%,
+  6%,
+  10%,
+  20%,
+  24%,
+  38%,
+  42%,
+  46%,
+  62%,
+  66%,
+  86%,
+  100% {
+    transform: scaleY(1);
+  }
+  8%,
+  22%,
+  40%,
+  44%,
+  64%,
+  88% {
+    transform: scaleY(0.06);
+  }
+}
+
+/* 감정 반응: 정답 점프 / 오답 시무룩 흔들림 */
+.happy {
+  animation: bounce 0.6s ease;
+}
+.sad {
+  animation: shake 0.5s ease;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-14px);
+  }
+  45% {
+    transform: translateY(0);
+  }
+  62% {
+    transform: translateY(-7px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-3deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(3deg);
+  }
+  60% {
+    transform: translateX(-4px) rotate(-2deg);
+  }
+  80% {
+    transform: translateX(4px) rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure,
+  .eyes,
+  .orb,
+  .happy,
+  .sad {
+    animation: none;
+  }
+}

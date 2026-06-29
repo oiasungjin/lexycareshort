@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd \\\"C:/Users/sungjin/Desktop/클로드/렉시케어간단버전\\\" && python -c \\\"import json;d=json.load(open('content/packs/movies.ko.json',encoding='utf-8'));[print(c['answer']['primary'],'→ 힌트',len(c['hints...",
+  "error": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\nUnicodeEncodeError: 'cp949' codec can't encode character '\\U0001f434' in position 2: illegal multibyte sequence\r\n���װŸ� ��Ȥ�� �� ��Ʈ 4 �� / level1 pieces",
+  "timestamp": "2026-06-27T13:24:50.536Z",
+  "retry_count": 1
+}

@@ -1,0 +1,39 @@
+.bubble {
+  position: relative;
+  flex: 1;
+  align-self: center;
+  background: var(--color-polar-light);
+  border: 2px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-float);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-eel-grey);
+  line-height: 1.35;
+}
+.large {
+  font-size: var(--font-size-lead);
+  padding: var(--space-3) var(--space-3);
+}
+
+/* 왼쪽 꼬리(보더) */
+.bubble::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 22px;
+  border-style: solid;
+  border-width: 8px 11px 8px 0;
+  border-color: transparent var(--color-hairline) transparent transparent;
+}
+/* 꼬리 안쪽(말풍선 배경색과 일치) */
+.bubble::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 22px;
+  border-style: solid;
+  border-width: 8px 11px 8px 0;
+  border-color: transparent var(--color-polar-light) transparent transparent;
+}

@@ -1,0 +1,88 @@
+.frame {
+  margin: 0;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background: var(--color-sky-blue);
+  color: var(--color-white);
+  font-size: var(--font-size-caption);
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-float);
+  letter-spacing: 0.3px;
+}
+
+.canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 포스터형은 살짝 다른 톤으로 구분 */
+.canvas[data-kind="poster"] {
+  background: linear-gradient(
+    160deg,
+    var(--surface-poster-top) 0%,
+    var(--surface-poster-bottom) 100%
+  );
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 포스터형은 가운데(인물) 기준으로 크롭해 위/아래 글씨를 모두 잘라낸다(정답 노출 방지). */
+.canvas[data-kind="poster"] .img {
+  object-position: center 42%;
+}
+
+
+.rebus {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+}
+
+.piece {
+  font-size: 40px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* '사' 같은 글자 조각도 자연스럽게 */
+.placeholderTag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+  background: var(--color-polar-light);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+.caption {
+  margin-top: var(--space-2);
+  text-align: center;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+}

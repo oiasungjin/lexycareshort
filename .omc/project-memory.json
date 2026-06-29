@@ -1,0 +1,461 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1782727959786,
+  "projectRoot": "C:\\Users\\sungjin\\Desktop\\클로드\\렉시케어간단버전",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "14.2.15",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "18.3.1",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "18.3.1",
+        "category": "frontend"
+      },
+      {
+        "name": "vitest",
+        "version": "2.1.3",
+        "category": "testing"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": "npm test",
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "typecheck": "tsc --noEmit",
+      "test": "vitest run"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "docs",
+      "public"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 3,
+      "lastAccessed": 1782727959725,
+      "keyFiles": [
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ]
+    },
+    "content": {
+      "path": "content",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1782727959732,
+      "keyFiles": [
+        "curriculum.ts",
+        "schema.ts"
+      ]
+    },
+    "deck": {
+      "path": "deck",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1782727959734,
+      "keyFiles": [
+        "memory-economy-slide.html",
+        "memory-economy.html"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 4,
+      "lastAccessed": 1782727959736,
+      "keyFiles": [
+        "architecture.md",
+        "quality-grades.md"
+      ]
+    },
+    "domain": {
+      "path": "domain",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1782727959739,
+      "keyFiles": [
+        "index.ts"
+      ]
+    },
+    "logic": {
+      "path": "logic",
+      "purpose": null,
+      "fileCount": 6,
+      "lastAccessed": 1782727959741,
+      "keyFiles": [
+        "record-store.localstorage.ts",
+        "record-store.test.ts",
+        "record-store.ts",
+        "scoring.test.ts",
+        "scoring.ts"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 3,
+      "lastAccessed": 1782727959742,
+      "keyFiles": [
+        "memory-economy-slide.html",
+        "memory-economy.html",
+        "여신-머리카락가닥.png"
+      ]
+    },
+    "ui": {
+      "path": "ui",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1782727959743,
+      "keyFiles": []
+    },
+    "ui\\components": {
+      "path": "ui\\components",
+      "purpose": "UI components",
+      "fileCount": 38,
+      "lastAccessed": 1782727959750,
+      "keyFiles": [
+        "AppShell.module.css",
+        "AppShell.tsx",
+        "CardTrainer.module.css"
+      ]
+    },
+    "ui\\lib": {
+      "path": "ui\\lib",
+      "purpose": "Library code",
+      "fileCount": 1,
+      "lastAccessed": 1782727959751,
+      "keyFiles": [
+        "sfx.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "ui\\components\\HubMap.tsx",
+      "accessCount": 73,
+      "lastAccessed": 1782617267639,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\CardTrainer.tsx",
+      "accessCount": 60,
+      "lastAccessed": 1782576000466,
+      "type": "directory"
+    },
+    {
+      "path": "ui\\components\\HubMap.module.css",
+      "accessCount": 40,
+      "lastAccessed": 1782615756497,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\CardTrainer.module.css",
+      "accessCount": 25,
+      "lastAccessed": 1782575293847,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\GoddessScene.module.css",
+      "accessCount": 16,
+      "lastAccessed": 1782562084777,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\Splash.module.css",
+      "accessCount": 13,
+      "lastAccessed": 1782561629358,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\Splash.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1782561408316,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\AppShell.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1782582570104,
+      "type": "file"
+    },
+    {
+      "path": "content\\packs\\movies.ko.json",
+      "accessCount": 11,
+      "lastAccessed": 1782573224964,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\Dashboard.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1782581553178,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\Training.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1782579278898,
+      "type": "file"
+    },
+    {
+      "path": "ui\\tokens\\tokens.css",
+      "accessCount": 8,
+      "lastAccessed": 1782615180395,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\GoddessScene.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1782562066357,
+      "type": "file"
+    },
+    {
+      "path": "content\\curriculum.ts",
+      "accessCount": 7,
+      "lastAccessed": 1782568980058,
+      "type": "directory"
+    },
+    {
+      "path": "ui\\components\\HintImage.module.css",
+      "accessCount": 7,
+      "lastAccessed": 1782571400395,
+      "type": "directory"
+    },
+    {
+      "path": "ui\\components\\CustomAdd.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1782585236532,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\HintCarousel.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1782571428586,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\CustomAdd.module.css",
+      "accessCount": 6,
+      "lastAccessed": 1782581926139,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\Dashboard.module.css",
+      "accessCount": 5,
+      "lastAccessed": 1782581260315,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\SpeechBubble.module.css",
+      "accessCount": 4,
+      "lastAccessed": 1782615717803,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\LessonComplete.module.css",
+      "accessCount": 3,
+      "lastAccessed": 1782558208190,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\HintCarousel.module.css",
+      "accessCount": 3,
+      "lastAccessed": 1782558209445,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\HintImage.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1782571391466,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\Training.module.css",
+      "accessCount": 3,
+      "lastAccessed": 1782578936135,
+      "type": "file"
+    },
+    {
+      "path": "logic\\session.ts",
+      "accessCount": 2,
+      "lastAccessed": 1782567994411,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\TabBar.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1782568657846,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\TabBar.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1782568669846,
+      "type": "file"
+    },
+    {
+      "path": "app\\globals.css",
+      "accessCount": 2,
+      "lastAccessed": 1782571591057,
+      "type": "file"
+    },
+    {
+      "path": "domain\\index.ts",
+      "accessCount": 2,
+      "lastAccessed": 1782576862683,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\AppShell.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1782577011988,
+      "type": "file"
+    },
+    {
+      "path": "logic\\record-store.localstorage.ts",
+      "accessCount": 2,
+      "lastAccessed": 1782581113165,
+      "type": "file"
+    },
+    {
+      "path": "logic\\record-store.ts",
+      "accessCount": 2,
+      "lastAccessed": 1782581133911,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\SpeechBubble.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1782615715711,
+      "type": "file"
+    },
+    {
+      "path": "app\\layout.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1782557803236,
+      "type": "file"
+    },
+    {
+      "path": "ui",
+      "accessCount": 1,
+      "lastAccessed": 1782557950743,
+      "type": "directory"
+    },
+    {
+      "path": "ui\\components\\DuoButton.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1782564073197,
+      "type": "file"
+    },
+    {
+      "path": "ui\\components\\LessonComplete.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1782565158536,
+      "type": "directory"
+    },
+    {
+      "path": "ui\\components\\DuoButton.module.css",
+      "accessCount": 1,
+      "lastAccessed": 1782565733524,
+      "type": "file"
+    },
+    {
+      "path": "content\\schema.ts",
+      "accessCount": 1,
+      "lastAccessed": 1782566307344,
+      "type": "file"
+    },
+    {
+      "path": "public\\cards\\실미도.jpg",
+      "accessCount": 1,
+      "lastAccessed": 1782574190063,
+      "type": "file"
+    },
+    {
+      "path": "대시보드.jpg",
+      "accessCount": 1,
+      "lastAccessed": 1782581033717,
+      "type": "file"
+    },
+    {
+      "path": "docs\\architecture.md",
+      "accessCount": 1,
+      "lastAccessed": 1782615179691,
+      "type": "directory"
+    },
+    {
+      "path": "deck\\memory-economy.html",
+      "accessCount": 1,
+      "lastAccessed": 1782617782422,
+      "type": "file"
+    },
+    {
+      "path": "deck\\memory-economy-slide.html",
+      "accessCount": 1,
+      "lastAccessed": 1782618293536,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1782728344583,
+      "type": "file"
+    },
+    {
+      "path": "next.config.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1782728352356,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

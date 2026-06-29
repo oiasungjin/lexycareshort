@@ -1,0 +1,638 @@
+{
+  "id": "movies-ko",
+  "title": "영화 제목 떠올리기",
+  "locale": "ko",
+  "cards": [
+    {
+      "id": "movie-maljukgeori-janhoksa",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "말죽거리 잔혹사",
+        "accept": [
+          "말죽거리잔혹사"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '말죽거리 잔혹사' 공식 포스터에서 제목 글씨만 제거. 1970년대 교복 입은 남학생들, 흐릿한 학교 운동장 배경, 복고풍 톤.",
+          "imagePath": "/cards/maljukgeori-janhoksa.jpg",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 '말' 힌트 — 말 한 마리 그림.",
+          "pieces": [
+            "🐴"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 '사' 힌트 — 숫자 4(사) 그림.",
+          "pieces": [
+            "4️⃣"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스: 말(🐴) + 잔혹하고 거친 분위기(🔪) + 마지막 글자 '사'. 가운데는 그림으로.",
+          "pieces": [
+            "🐴",
+            "🔪",
+            "사"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-project-hail-mary",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "프로젝트 헤일메리",
+        "accept": [
+          "헤일메리",
+          "프로젝트헤일메리"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '프로젝트 헤일메리' 공식 포스터에서 제목 글씨만 제거. 우주선·우주 비행사, SF 분위기.",
+          "imagePath": "/cards/project-hail-mary.jpg",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 '헤' 힌트 — 인사 'Hey'(영어).",
+          "pieces": [
+            "Hey"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 '리' 힌트 — 리본 그림.",
+          "pieces": [
+            "🎀"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스: 헤='Hey'(영어) + 일=숫자 1 + 메='메에' 우는 양 + 리=리본. 가운데(일·메)는 그림.",
+          "pieces": [
+            "Hey",
+            "1️⃣",
+            "🐑",
+            "🎀"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-chingu",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 2,
+      "answer": {
+        "primary": "친구",
+        "accept": [
+          "친구"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '친구' 포스터에서 제목 글씨만 제거.",
+          "imagePath": "/cards/chingu.jpg",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '친'=친한 사이",
+          "pieces": [
+            "🤝"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '구'=숫자 9",
+          "pieces": [
+            "9️⃣"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 친(🤝)+구(9)",
+          "pieces": [
+            "🤝",
+            "9️⃣"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-shiri",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 2,
+      "answer": {
+        "primary": "쉬리",
+        "accept": [
+          "쉬리"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '쉬리' 포스터에서 제목 글씨만 제거.",
+          "imagePath": "/cards/chiri.jpg",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '쉬'=쉿(조용히)",
+          "pieces": [
+            "🤫"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '리'=리본",
+          "pieces": [
+            "🎀"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 쉬(🤫)+리(🎀)",
+          "pieces": [
+            "🤫",
+            "🎀"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-the-host",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 2,
+      "answer": {
+        "primary": "괴물",
+        "accept": [
+          "괴물"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '괴물' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/괴물.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '괴'=괴물/도깨비",
+          "pieces": [
+            "👹"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '물'=물",
+          "pieces": [
+            "💧"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 괴(👹)+물(💧)",
+          "pieces": [
+            "👹",
+            "💧"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-parasite",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "기생충",
+        "accept": [
+          "기생충"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '기생충' 포스터에서 제목 글씨만 제거.",
+          "imagePath": "/cards/gisangchung.jpg",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — 글자 '기'",
+          "pieces": [
+            "기"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '충'=벌레",
+          "pieces": [
+            "🐛"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 기(글자)+생(🌱)+충(🐛)",
+          "pieces": [
+            "기",
+            "🌱",
+            "🐛"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-silmido",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "실미도",
+        "accept": [
+          "실미도"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '실미도' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/실미도.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '실'=실(바느질)",
+          "pieces": [
+            "🧵"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '도'=섬",
+          "pieces": [
+            "🏝️"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 실(🧵)+미(🍚 쌀)+도(🏝️ 섬)",
+          "pieces": [
+            "🧵",
+            "🍚",
+            "🏝️"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-taxi-driver",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "택시운전사",
+        "accept": [
+          "택시운전사"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '택시운전사' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/택시운전사.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '택'=택시",
+          "pieces": [
+            "🚕"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '사'=숫자 4",
+          "pieces": [
+            "4️⃣"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 택시(🚕)+운전사(🧑‍✈️)",
+          "pieces": [
+            "🚕",
+            "🧑‍✈️"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-gukje-market",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "국제시장",
+        "accept": [
+          "국제시장"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '국제시장' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/국제시장.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '국'=국제(세계)",
+          "pieces": [
+            "🌍"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '장'=시장",
+          "pieces": [
+            "🛒"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 국제(🌍)+시장(🛒)",
+          "pieces": [
+            "🌍",
+            "🛒"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-myeongryang",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "명량",
+        "accept": [
+          "명량"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '명량' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/명랑.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '명'=밝을 명",
+          "pieces": [
+            "💡"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '량'=헤아릴 량",
+          "pieces": [
+            "⚖️"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 명량해전(⚔️🌊)",
+          "pieces": [
+            "⚔️",
+            "🌊"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-gwanghae",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "광해",
+        "accept": [
+          "광해",
+          "광해왕이된남자"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '광해' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/광해.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '광'=빛 광",
+          "pieces": [
+            "💡"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '해'=바다 해",
+          "pieces": [
+            "🌊"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 광(💡)+해(🌊)",
+          "pieces": [
+            "💡",
+            "🌊"
+          ],
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "movie-titanic",
+      "category": "영화",
+      "locale": "ko",
+      "difficulty": 3,
+      "answer": {
+        "primary": "타이타닉",
+        "accept": [
+          "타이타닉"
+        ]
+      },
+      "hints": [
+        {
+          "level": 1,
+          "kind": "poster",
+          "imagePrompt": "원본 그림(첫 힌트) — 영화 '타이타닉' 포스터에서 제목 글씨만 제거.",
+          "pieces": [
+            "🎬"
+          ],
+          "caption": "",
+          "imagePath": "/cards/타이타닉.jpg"
+        },
+        {
+          "level": 2,
+          "kind": "rebus",
+          "imagePrompt": "첫 글자 힌트 — '타'=배",
+          "pieces": [
+            "🚢"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 3,
+          "kind": "rebus",
+          "imagePrompt": "마지막 글자 힌트 — '닉'=빙산(침몰)",
+          "pieces": [
+            "🧊"
+          ],
+          "caption": ""
+        },
+        {
+          "level": 4,
+          "kind": "rebus",
+          "imagePrompt": "전체 리버스 — 타이타닉(🚢)+빙산(🧊)",
+          "pieces": [
+            "🚢",
+            "🧊"
+          ],
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,711 @@
+{
+  "updatedAt": "2026-06-28T04:11:41.069Z",
+  "missions": [
+    {
+      "id": "session:d8e4844b-17f7-4e62-a88f-d225f5f361f3:none",
+      "source": "session",
+      "name": "none",
+      "objective": "Session mission",
+      "createdAt": "2026-06-25T16:37:49.597Z",
+      "updatedAt": "2026-06-28T04:11:41.069Z",
+      "status": "done",
+      "workerCount": 2,
+      "taskCounts": {
+        "total": 2,
+        "pending": 0,
+        "blocked": 0,
+        "inProgress": 0,
+        "completed": 2,
+        "failed": 0
+      },
+      "agents": [
+        {
+          "name": "lexi-reviewer:ab3bfb5",
+          "role": "lexi-reviewer",
+          "ownership": "ab3bfb5496c008dad",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-06-28T04:11:41.069Z"
+        },
+        {
+          "name": "designer:aae832c",
+          "role": "designer",
+          "ownership": "aae832c39d12da80a",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-06-27T06:27:21.477Z"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "session-stop:abe2011e1d7d42510:2026-06-27T06:07:55.451Z",
+          "at": "2026-06-27T06:07:55.451Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:abe2011e1d7d42510"
+        },
+        {
+          "id": "session-stop:a27b9d5d00d0f8e3a:2026-06-27T06:12:38.913Z",
+          "at": "2026-06-27T06:12:38.913Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a27b9d5d00d0f8e3a"
+        },
+        {
+          "id": "session-start:aae832c39d12da80a:2026-06-27T06:25:35.138Z",
+          "at": "2026-06-27T06:25:35.138Z",
+          "kind": "update",
+          "agent": "designer:aae832c",
+          "detail": "started designer:aae832c",
+          "sourceKey": "session-start:aae832c39d12da80a"
+        },
+        {
+          "id": "session-stop:aae832c39d12da80a:2026-06-27T06:27:21.477Z",
+          "at": "2026-06-27T06:27:21.477Z",
+          "kind": "completion",
+          "agent": "designer:aae832c",
+          "detail": "completed",
+          "sourceKey": "session-stop:aae832c39d12da80a"
+        },
+        {
+          "id": "session-stop:ac22f45e0ae550d8c:2026-06-27T06:32:53.887Z",
+          "at": "2026-06-27T06:32:53.887Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ac22f45e0ae550d8c"
+        },
+        {
+          "id": "session-stop:ae189c615d669bcb3:2026-06-27T06:41:38.686Z",
+          "at": "2026-06-27T06:41:38.686Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae189c615d669bcb3"
+        },
+        {
+          "id": "session-stop:a5589a9c64b6431b5:2026-06-27T07:02:48.056Z",
+          "at": "2026-06-27T07:02:48.056Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a5589a9c64b6431b5"
+        },
+        {
+          "id": "session-stop:ac9c34c11cc9d3792:2026-06-27T07:25:36.291Z",
+          "at": "2026-06-27T07:25:36.291Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ac9c34c11cc9d3792"
+        },
+        {
+          "id": "session-stop:a3641cdae2c095b59:2026-06-27T07:27:37.658Z",
+          "at": "2026-06-27T07:27:37.658Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a3641cdae2c095b59"
+        },
+        {
+          "id": "session-stop:ac47a20accd448419:2026-06-27T07:40:00.029Z",
+          "at": "2026-06-27T07:40:00.029Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ac47a20accd448419"
+        },
+        {
+          "id": "session-stop:a811419b6d77c529d:2026-06-27T07:49:20.410Z",
+          "at": "2026-06-27T07:49:20.410Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a811419b6d77c529d"
+        },
+        {
+          "id": "session-stop:ab9ffeeac9c93db3a:2026-06-27T08:06:32.659Z",
+          "at": "2026-06-27T08:06:32.659Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ab9ffeeac9c93db3a"
+        },
+        {
+          "id": "session-stop:ad913825a9bbb904c:2026-06-27T08:12:39.370Z",
+          "at": "2026-06-27T08:12:39.370Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad913825a9bbb904c"
+        },
+        {
+          "id": "session-stop:a9b95d8108b624641:2026-06-27T08:46:38.057Z",
+          "at": "2026-06-27T08:46:38.057Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a9b95d8108b624641"
+        },
+        {
+          "id": "session-stop:a3111fe9b592ffa44:2026-06-27T08:49:56.286Z",
+          "at": "2026-06-27T08:49:56.286Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a3111fe9b592ffa44"
+        },
+        {
+          "id": "session-stop:a3af59ad29a2b9f86:2026-06-27T09:12:04.261Z",
+          "at": "2026-06-27T09:12:04.261Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a3af59ad29a2b9f86"
+        },
+        {
+          "id": "session-stop:a0d9d572ec6e8e166:2026-06-27T10:57:32.623Z",
+          "at": "2026-06-27T10:57:32.623Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a0d9d572ec6e8e166"
+        },
+        {
+          "id": "session-stop:ad0f897816136ee25:2026-06-27T11:10:09.503Z",
+          "at": "2026-06-27T11:10:09.503Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad0f897816136ee25"
+        },
+        {
+          "id": "session-stop:ae0701a5fad043996:2026-06-27T11:20:09.100Z",
+          "at": "2026-06-27T11:20:09.100Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae0701a5fad043996"
+        },
+        {
+          "id": "session-stop:aa7fa7d6dc90a3c5f:2026-06-27T11:26:32.598Z",
+          "at": "2026-06-27T11:26:32.598Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aa7fa7d6dc90a3c5f"
+        },
+        {
+          "id": "session-stop:a1659eecfeaf1a395:2026-06-27T11:27:47.602Z",
+          "at": "2026-06-27T11:27:47.602Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a1659eecfeaf1a395"
+        },
+        {
+          "id": "session-stop:a5a1416197a0a18a6:2026-06-27T11:29:14.367Z",
+          "at": "2026-06-27T11:29:14.367Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a5a1416197a0a18a6"
+        },
+        {
+          "id": "session-stop:a55ca3398f8ce05c5:2026-06-27T11:36:11.461Z",
+          "at": "2026-06-27T11:36:11.461Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a55ca3398f8ce05c5"
+        },
+        {
+          "id": "session-stop:ab18f231e18e5afe0:2026-06-27T11:38:42.339Z",
+          "at": "2026-06-27T11:38:42.339Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ab18f231e18e5afe0"
+        },
+        {
+          "id": "session-stop:aabbc94bb11672944:2026-06-27T11:40:16.163Z",
+          "at": "2026-06-27T11:40:16.163Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aabbc94bb11672944"
+        },
+        {
+          "id": "session-stop:a9777ed481704fd10:2026-06-27T11:47:12.553Z",
+          "at": "2026-06-27T11:47:12.553Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a9777ed481704fd10"
+        },
+        {
+          "id": "session-stop:a165752e0150b27c5:2026-06-27T11:54:06.323Z",
+          "at": "2026-06-27T11:54:06.323Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a165752e0150b27c5"
+        },
+        {
+          "id": "session-stop:a502872cdea5fb76d:2026-06-27T11:57:17.644Z",
+          "at": "2026-06-27T11:57:17.644Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a502872cdea5fb76d"
+        },
+        {
+          "id": "session-stop:ada7ba2f5d847a1c9:2026-06-27T11:59:54.798Z",
+          "at": "2026-06-27T11:59:54.798Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ada7ba2f5d847a1c9"
+        },
+        {
+          "id": "session-stop:a3a0fa5bc3a36132e:2026-06-27T12:00:58.767Z",
+          "at": "2026-06-27T12:00:58.767Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a3a0fa5bc3a36132e"
+        },
+        {
+          "id": "session-stop:a75b452f640af666b:2026-06-27T12:10:22.880Z",
+          "at": "2026-06-27T12:10:22.880Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a75b452f640af666b"
+        },
+        {
+          "id": "session-stop:a67c99043124835f2:2026-06-27T12:17:10.447Z",
+          "at": "2026-06-27T12:17:10.447Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a67c99043124835f2"
+        },
+        {
+          "id": "session-stop:a7ae72efca2739ed8:2026-06-27T12:19:05.357Z",
+          "at": "2026-06-27T12:19:05.357Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a7ae72efca2739ed8"
+        },
+        {
+          "id": "session-stop:afb8ca8cd22abada9:2026-06-27T12:22:09.576Z",
+          "at": "2026-06-27T12:22:09.576Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:afb8ca8cd22abada9"
+        },
+        {
+          "id": "session-stop:a37156926bdadf480:2026-06-27T12:24:14.068Z",
+          "at": "2026-06-27T12:24:14.068Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a37156926bdadf480"
+        },
+        {
+          "id": "session-stop:afe5fc51a4b98fff3:2026-06-27T12:35:35.966Z",
+          "at": "2026-06-27T12:35:35.966Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:afe5fc51a4b98fff3"
+        },
+        {
+          "id": "session-stop:a56d5926c827d1aac:2026-06-27T12:37:45.255Z",
+          "at": "2026-06-27T12:37:45.255Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a56d5926c827d1aac"
+        },
+        {
+          "id": "session-stop:ad022def25b57c2a8:2026-06-27T12:45:43.184Z",
+          "at": "2026-06-27T12:45:43.184Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad022def25b57c2a8"
+        },
+        {
+          "id": "session-stop:a81568159e65883ae:2026-06-27T13:03:27.919Z",
+          "at": "2026-06-27T13:03:27.919Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a81568159e65883ae"
+        },
+        {
+          "id": "session-stop:aba9b91c85e26ccd2:2026-06-27T13:12:52.596Z",
+          "at": "2026-06-27T13:12:52.596Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aba9b91c85e26ccd2"
+        },
+        {
+          "id": "session-stop:ae5329f1ffb4bfa96:2026-06-27T13:37:33.208Z",
+          "at": "2026-06-27T13:37:33.208Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae5329f1ffb4bfa96"
+        },
+        {
+          "id": "session-stop:ae11cb3fbcbeca92c:2026-06-27T14:07:52.512Z",
+          "at": "2026-06-27T14:07:52.512Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae11cb3fbcbeca92c"
+        },
+        {
+          "id": "session-stop:af4ac322fa78793a2:2026-06-27T14:13:40.954Z",
+          "at": "2026-06-27T14:13:40.954Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:af4ac322fa78793a2"
+        },
+        {
+          "id": "session-stop:afaf7d0d0e6e76120:2026-06-27T14:25:32.300Z",
+          "at": "2026-06-27T14:25:32.300Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:afaf7d0d0e6e76120"
+        },
+        {
+          "id": "session-stop:a038cd124b6ccaa11:2026-06-27T14:30:08.459Z",
+          "at": "2026-06-27T14:30:08.459Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a038cd124b6ccaa11"
+        },
+        {
+          "id": "session-stop:a23d5c6dc2376b0d7:2026-06-27T14:41:00.132Z",
+          "at": "2026-06-27T14:41:00.132Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a23d5c6dc2376b0d7"
+        },
+        {
+          "id": "session-stop:aceadea156ae0977c:2026-06-27T14:44:52.034Z",
+          "at": "2026-06-27T14:44:52.034Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aceadea156ae0977c"
+        },
+        {
+          "id": "session-stop:ad7fc41c5368f1591:2026-06-27T15:05:03.947Z",
+          "at": "2026-06-27T15:05:03.947Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad7fc41c5368f1591"
+        },
+        {
+          "id": "session-stop:af52ec557a1836398:2026-06-27T15:17:50.244Z",
+          "at": "2026-06-27T15:17:50.244Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:af52ec557a1836398"
+        },
+        {
+          "id": "session-stop:a3680c5825a885d3d:2026-06-27T15:42:55.242Z",
+          "at": "2026-06-27T15:42:55.242Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a3680c5825a885d3d"
+        },
+        {
+          "id": "session-stop:a7e736ff129e0b4ef:2026-06-27T15:56:15.948Z",
+          "at": "2026-06-27T15:56:15.948Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a7e736ff129e0b4ef"
+        },
+        {
+          "id": "session-stop:a42f721c7907b27f3:2026-06-27T16:04:29.997Z",
+          "at": "2026-06-27T16:04:29.997Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a42f721c7907b27f3"
+        },
+        {
+          "id": "session-stop:ad3264d27e29c2eb0:2026-06-27T16:06:51.433Z",
+          "at": "2026-06-27T16:06:51.433Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad3264d27e29c2eb0"
+        },
+        {
+          "id": "session-stop:a557d0229e034ef28:2026-06-27T16:18:11.908Z",
+          "at": "2026-06-27T16:18:11.908Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a557d0229e034ef28"
+        },
+        {
+          "id": "session-stop:aa27f56f7af00d327:2026-06-27T16:21:11.328Z",
+          "at": "2026-06-27T16:21:11.328Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aa27f56f7af00d327"
+        },
+        {
+          "id": "session-stop:a703864260300a917:2026-06-27T16:27:48.633Z",
+          "at": "2026-06-27T16:27:48.633Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a703864260300a917"
+        },
+        {
+          "id": "session-stop:afdd558729a61dd89:2026-06-27T16:30:22.561Z",
+          "at": "2026-06-27T16:30:22.561Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:afdd558729a61dd89"
+        },
+        {
+          "id": "session-stop:a2188bb079cef793a:2026-06-27T16:32:57.459Z",
+          "at": "2026-06-27T16:32:57.459Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a2188bb079cef793a"
+        },
+        {
+          "id": "session-stop:acc5e0302cf4dde28:2026-06-27T16:59:47.906Z",
+          "at": "2026-06-27T16:59:47.906Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:acc5e0302cf4dde28"
+        },
+        {
+          "id": "session-stop:a4ad608323a93304e:2026-06-27T17:08:04.092Z",
+          "at": "2026-06-27T17:08:04.092Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a4ad608323a93304e"
+        },
+        {
+          "id": "session-stop:a1ea272a22cd9594e:2026-06-27T17:12:04.692Z",
+          "at": "2026-06-27T17:12:04.692Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a1ea272a22cd9594e"
+        },
+        {
+          "id": "session-stop:af59711a30c49d7ff:2026-06-27T17:16:14.181Z",
+          "at": "2026-06-27T17:16:14.181Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:af59711a30c49d7ff"
+        },
+        {
+          "id": "session-stop:af8a4cdf8c4be13ee:2026-06-27T17:17:08.374Z",
+          "at": "2026-06-27T17:17:08.374Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:af8a4cdf8c4be13ee"
+        },
+        {
+          "id": "session-stop:aa18a0d766aa99e6d:2026-06-27T17:31:11.539Z",
+          "at": "2026-06-27T17:31:11.539Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aa18a0d766aa99e6d"
+        },
+        {
+          "id": "session-stop:ad9eb138e198a7ecd:2026-06-27T17:33:34.896Z",
+          "at": "2026-06-27T17:33:34.896Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad9eb138e198a7ecd"
+        },
+        {
+          "id": "session-stop:a7d85cafb62ea5da2:2026-06-27T17:45:37.120Z",
+          "at": "2026-06-27T17:45:37.120Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a7d85cafb62ea5da2"
+        },
+        {
+          "id": "session-stop:ae9534dc1f0722e99:2026-06-27T17:51:46.907Z",
+          "at": "2026-06-27T17:51:46.907Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae9534dc1f0722e99"
+        },
+        {
+          "id": "session-stop:ad8648ee4efb1e126:2026-06-27T18:04:58.178Z",
+          "at": "2026-06-27T18:04:58.178Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad8648ee4efb1e126"
+        },
+        {
+          "id": "session-stop:aa611403733f9bc94:2026-06-27T18:15:00.053Z",
+          "at": "2026-06-27T18:15:00.053Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aa611403733f9bc94"
+        },
+        {
+          "id": "session-stop:ae577b7186293c1a8:2026-06-27T18:25:40.838Z",
+          "at": "2026-06-27T18:25:40.838Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae577b7186293c1a8"
+        },
+        {
+          "id": "session-stop:a45ad3d0b72f1f6b9:2026-06-27T18:56:34.138Z",
+          "at": "2026-06-27T18:56:34.138Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a45ad3d0b72f1f6b9"
+        },
+        {
+          "id": "session-stop:adabaec84eb6b1cb1:2026-06-28T02:23:03.919Z",
+          "at": "2026-06-28T02:23:03.919Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:adabaec84eb6b1cb1"
+        },
+        {
+          "id": "session-stop:a456b88cd31cfe610:2026-06-28T02:32:49.600Z",
+          "at": "2026-06-28T02:32:49.600Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a456b88cd31cfe610"
+        },
+        {
+          "id": "session-stop:abfcddb4173953482:2026-06-28T03:03:31.224Z",
+          "at": "2026-06-28T03:03:31.224Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:abfcddb4173953482"
+        },
+        {
+          "id": "session-stop:ab96ad3712f1c4261:2026-06-28T03:06:08.912Z",
+          "at": "2026-06-28T03:06:08.912Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ab96ad3712f1c4261"
+        },
+        {
+          "id": "session-stop:ae80f31f773614d29:2026-06-28T03:09:09.814Z",
+          "at": "2026-06-28T03:09:09.814Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae80f31f773614d29"
+        },
+        {
+          "id": "session-stop:a7621242c2616b2eb:2026-06-28T03:11:31.323Z",
+          "at": "2026-06-28T03:11:31.323Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a7621242c2616b2eb"
+        },
+        {
+          "id": "session-stop:a93e2a40c410b6383:2026-06-28T03:16:56.438Z",
+          "at": "2026-06-28T03:16:56.438Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a93e2a40c410b6383"
+        },
+        {
+          "id": "session-stop:a7eed31a3f990539f:2026-06-28T03:19:57.121Z",
+          "at": "2026-06-28T03:19:57.121Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a7eed31a3f990539f"
+        },
+        {
+          "id": "session-stop:aabede2a4019b1fb4:2026-06-28T03:31:20.991Z",
+          "at": "2026-06-28T03:31:20.991Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:aabede2a4019b1fb4"
+        },
+        {
+          "id": "session-stop:acfadc9e4530dc295:2026-06-28T03:42:07.544Z",
+          "at": "2026-06-28T03:42:07.544Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:acfadc9e4530dc295"
+        },
+        {
+          "id": "session-stop:a44d05f3023ad67ef:2026-06-28T04:08:38.051Z",
+          "at": "2026-06-28T04:08:38.051Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:a44d05f3023ad67ef"
+        },
+        {
+          "id": "session-stop:ad4c84b37d7994039:2026-06-28T04:11:41.069Z",
+          "at": "2026-06-28T04:11:41.069Z",
+          "kind": "completion",
+          "agent": "lexi-reviewer:ab3bfb5",
+          "detail": "completed",
+          "sourceKey": "session-stop:ad4c84b37d7994039"
+        }
+      ]
+    }
+  ]
+}

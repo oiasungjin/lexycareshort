@@ -1,0 +1,617 @@
+.screen {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+}
+
+/* 상단 고정 헤더(스탯 + 검색) */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-white);
+}
+.statbar {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  padding: var(--space-3) var(--space-3) var(--space-1);
+}
+
+/* 검색 */
+.searchWrap {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  pointer-events: none;
+  /* 색 제거 → 회색 단색 실루엣 */
+  color: transparent;
+  text-shadow: 0 0 0 var(--color-eel-grey-soft);
+}
+.search {
+  width: 100%;
+  padding: 11px 38px;
+  font-family: inherit;
+  font-size: var(--font-size-body);
+  color: var(--color-eel-grey);
+  background: var(--color-polar-light);
+  border: 2px solid var(--color-hairline);
+  border-radius: var(--radius-pill);
+  outline: none;
+}
+.search:focus {
+  border-color: var(--color-sky-blue);
+  background: var(--color-white);
+}
+.clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-hairline);
+  color: var(--color-eel-grey);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 검색 결과 */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+.noResult {
+  text-align: center;
+  color: var(--color-eel-grey-soft);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-5) 0;
+}
+.resultRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px 12px;
+  border: 2px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-align: left;
+}
+.resultIcon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: var(--color-polar-light);
+}
+.resultOpen {
+  background: var(--hub);
+}
+.resultLabel {
+  flex: 1;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-eel-grey);
+}
+.resultHub {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-eel-grey-soft);
+}
+.stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-eel-grey);
+}
+
+.scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3) var(--space-6);
+}
+
+/* 여신 인사 */
+.greet {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.greetChar {
+  flex: none;
+  width: 88px;
+  height: 88px;
+}
+.greetText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+/* 프레임 없이 글씨만 — 말풍선 옆 안내 문구(크고 진하게) */
+.greetTagline {
+  flex: 1.5;
+  min-width: 0;
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: 800;
+  color: var(--color-eel-grey);
+  line-height: 1.7;
+}
+/* 뇌근육 강조 — 글자 위 방점(점점점) + 컬러 */
+.emph {
+  color: var(--color-feather-green);
+  font-weight: 800;
+  -webkit-text-emphasis: filled dot;
+  text-emphasis: filled dot;
+  -webkit-text-emphasis-color: var(--color-feather-green);
+  text-emphasis-color: var(--color-feather-green);
+  text-emphasis-position: over;
+}
+
+/* 홈 히어로 — 여신 + 말풍선 + 큰 태그라인 (시선 집중, 강) */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.heroChar {
+  flex: none;
+  width: 108px;
+  height: 108px;
+}
+.heroTagline {
+  margin: var(--space-1) 0 var(--space-3);
+  text-align: center;
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  color: var(--color-eel-grey);
+  line-height: 1.3;
+}
+.heroEmph {
+  color: var(--color-feather-green);
+  font-weight: 800;
+  -webkit-text-emphasis: filled dot;
+  text-emphasis: filled dot;
+  -webkit-text-emphasis-color: var(--color-feather-green);
+  text-emphasis-color: var(--color-feather-green);
+  text-emphasis-position: over;
+}
+
+/* 홈 선택 카드 — 보조 액션 (가볍고 약하게). 아이콘은 쉐도우 실루엣 */
+.choiceCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1.5px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--shadow-card-soft);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.06s ease;
+}
+.choiceCard:active {
+  transform: scale(0.99);
+}
+.choiceIcon {
+  flex: none;
+  width: 34px;
+  text-align: center;
+  font-size: 20px;
+  /* 색 제거 → 부드러운 쉐도우 실루엣 */
+  color: transparent;
+  text-shadow: 0 3px 4px rgba(75, 75, 75, 0.3);
+}
+.choiceText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.choiceTitle {
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-eel-grey);
+}
+.choiceDesc {
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+  line-height: 1.35;
+}
+.choiceArrow {
+  flex: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-hairline);
+}
+
+/* 분야 펼침 — 처음으로 돌아가기 칩 */
+.backChip {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 14px 6px 10px;
+  border: 2px solid var(--color-hairline);
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  color: var(--color-eel-grey-soft);
+  font-family: inherit;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 그룹 구분 배너(전공·직업 전문용어) */
+.groupDivider {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  margin-top: var(--space-3);
+  padding: var(--space-4) var(--space-3);
+  border-radius: var(--radius-card);
+  background: linear-gradient(135deg, #ffd76a, #ff9a3c);
+  box-shadow: var(--shadow-card);
+}
+.premiumBadge {
+  align-self: center;
+  font-size: var(--font-size-caption);
+  font-weight: 700;
+  color: var(--color-eel-grey);
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+  padding: 3px 12px;
+  box-shadow: var(--shadow-card-soft);
+}
+.groupTitle {
+  font-size: var(--font-size-lead);
+  font-weight: 600;
+  color: var(--color-white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+.groupSub {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  opacity: 0.92;
+}
+
+/* 내 단어 영역 — 분야와 확실히 구분되는 개인 카드 */
+.mineCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: transparent;
+  border: 2px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+}
+.mineTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.mineChar {
+  flex: none;
+  width: 72px;
+  height: 72px;
+}
+.mineText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.mineKicker {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-feather-green-dark);
+}
+.mineTitle {
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  color: var(--color-eel-grey);
+}
+.mineSub {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+  line-height: 1.4;
+}
+
+/* 분야 영역 헤더 — 위에 구분선으로 내 단어와 분리 */
+.fieldHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+.fieldLabel {
+  font-size: var(--font-size-lead);
+  font-weight: 700;
+  color: var(--color-eel-grey);
+}
+.fieldSub {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+}
+
+/* 분야(허브)와 다른 디자인: 그라데이션 + 알약 모양 + 아이콘 */
+.addBtn {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-feather-green);
+  border-bottom: 4px solid var(--color-feather-green-dark);
+  color: var(--color-white);
+  font-family: inherit;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.08s ease;
+}
+.addBtn:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+.addIcon {
+  font-size: 16px;
+}
+
+/* 허브 */
+.hub {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* 3D 컬러 배너(탭/호버로 펼침) */
+.banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--hub);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-card);
+  padding: 14px 18px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.bannerOpen {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.13);
+}
+.chevron {
+  font-size: 14px;
+  margin-left: 2px;
+  opacity: 0.9;
+}
+.bannerLock {
+  margin-left: auto;
+  font-size: 16px;
+}
+.bannerEmoji {
+  font-size: 26px;
+  line-height: 1;
+  /* 색 제거 → 배너색 위 더 진한 단색 실루엣(그림자처럼) */
+  color: transparent;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.42);
+}
+.bannerTitle {
+  font-size: var(--font-size-lead);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.bannerCount {
+  margin-left: auto;
+  font-size: var(--font-size-caption);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+/* 여신 중심 + 주변 원형 노드(오빗) */
+.orbit {
+  position: relative;
+  height: 300px;
+  transform-origin: top center;
+  animation: orbitIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes orbitIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit {
+    animation: none;
+  }
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 3;
+  pointer-events: none;
+}
+.centerGif {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.node {
+  position: absolute;
+  width: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 원형 노드(아이콘) */
+.bubble {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.08s ease;
+}
+.emoji {
+  font-size: 26px;
+  line-height: 1;
+  /* 색 제거 → 배경 위 단색 실루엣(형체만). 그림자처럼 더 진한 톤. */
+  color: transparent;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+}
+.label {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-eel-grey);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 열린 노드 — 허브색 채움 + 입체(아래 진한 림) */
+.nodeOpen .bubble {
+  background: var(--hub);
+  border-bottom: 6px solid rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-card);
+  animation: nodeBob 1.6s ease-in-out infinite;
+}
+.nodeOpen:active .bubble {
+  transform: translateY(3px);
+  border-bottom-width: 3px;
+}
+
+/* 잠긴 노드 — 옅은 원 + 자물쇠 */
+.nodeLocked .bubble {
+  background: var(--color-polar-light);
+  border-bottom: 6px solid var(--color-hairline);
+}
+.nodeLocked .emoji {
+  /* 잠긴 노드(옅은 배경) — 더 옅은 실루엣 */
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.28);
+}
+.nodeLocked .label {
+  color: var(--color-eel-grey-soft);
+}
+.lock {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 14px;
+}
+
+@keyframes nodeBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nodeOpen .bubble {
+    animation: none;
+  }
+}
+
+.tail {
+  text-align: center;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-eel-grey-soft);
+  padding: var(--space-3) 0;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--space-5);
+  transform: translateX(-50%);
+  background: var(--color-eel-grey);
+  color: var(--color-white);
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--shadow-card);
+  z-index: 40;
+  animation: toastIn 0.2s ease;
+}
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
