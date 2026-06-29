@@ -1,20 +1,17 @@
 "use client";
 
 // 관리자 통계 페이지(/admin) — 서버에 누적된 익명 훈련 데이터의 '집계'를 본다.
-// 읽기는 logic 의 StatsSource 인터페이스 뒤로만 호출(Supabase 세부는 logic 에 격리).
-//
-// 보안 주의: 아래 집계(simple_recall_stats)는 anon 키로 호출 가능 = 사실상 '공개 집계'다.
-// 따라서 ADMIN_PASSCODE 는 강한 인증이 아니라 우연한 노출을 줄이는 경량 게이트일 뿐이다.
-// 집계가 민감해지면 게이트를 서버측(RLS/별도 인증)으로 옮겨야 한다. (검수 M2)
+// 패스코드는 클라이언트에 없다. 입력값을 서버(/api/admin-stats)로 보내 검증받고,
+// 통과해야만 집계를 돌려받는다(통계 함수는 anon 호출 차단됨). 읽기 세부는 StatsSource 뒤로 격리.
 import { useState } from "react";
 import {
-  createSupabaseStatsSource,
+  createApiStatsSource,
+  UnauthorizedError,
   type RecallStats,
 } from "@/logic/stats-source";
 import styles from "./admin.module.css";
 
-const ADMIN_PASSCODE = "lexicare2026";
-const statsSource = createSupabaseStatsSource();
+const statsSource = createApiStatsSource();
 
 export default function AdminPage() {
   const [passcode, setPasscode] = useState("");
@@ -23,13 +20,21 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function load() {
+  // passcode 를 받는 형태로 분리 — 잠금 해제와 새로고침 모두 같은 경로를 쓴다.
+  async function fetchStats(code: string) {
     setLoading(true);
     setError(null);
     try {
-      setStats(await statsSource.load());
+      const data = await statsSource.load(code);
+      setStats(data);
+      setUnlocked(true);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "불러오기 실패");
+      if (e instanceof UnauthorizedError) {
+        setError("패스코드가 올바르지 않습니다.");
+        setUnlocked(false);
+      } else {
+        setError(e instanceof Error ? e.message : "불러오기 실패");
+      }
     } finally {
       setLoading(false);
     }
@@ -37,12 +42,7 @@ export default function AdminPage() {
 
   function unlock(e: React.FormEvent) {
     e.preventDefault();
-    if (passcode === ADMIN_PASSCODE) {
-      setUnlocked(true);
-      void load();
-    } else {
-      setError("패스코드가 올바르지 않습니다.");
-    }
+    void fetchStats(passcode);
   }
 
   if (!unlocked) {
@@ -57,8 +57,8 @@ export default function AdminPage() {
             placeholder="패스코드"
             className={styles.input}
           />
-          <button type="submit" className={styles.primaryBtn}>
-            보기
+          <button type="submit" disabled={loading} className={styles.primaryBtn}>
+            {loading ? "확인 중…" : "보기"}
           </button>
         </form>
         {error && <p className={styles.error}>{error}</p>}
@@ -91,7 +91,7 @@ export default function AdminPage() {
         <h1 className={styles.title}>관리자 통계</h1>
         <button
           type="button"
-          onClick={() => void load()}
+          onClick={() => void fetchStats(passcode)}
           disabled={loading}
           className={styles.ghostBtn}
         >
