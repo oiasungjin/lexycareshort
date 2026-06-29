@@ -13,11 +13,27 @@ import { CustomAdd } from "./CustomAdd";
 import { GoddessScene } from "./GoddessScene";
 import { getCardsByPack } from "@/logic/session";
 import { createLocalStorageStore } from "@/logic/record-store.localstorage";
+import { withRemoteSink } from "@/logic/record-store.tee";
+import { createSupabaseSink } from "@/logic/remote-sink";
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from "@/logic/supabase-config";
+import { getClientId } from "@/ui/lib/client-id";
 import type { Topic } from "@/content/curriculum";
 import styles from "./AppShell.module.css";
 
 export function AppShell() {
-  const store = useMemo(() => createLocalStorageStore(), []);
+  // 로컬 저장(사용자 UX) + 서버 수집(관리자 통계)을 함께 기록.
+  const store = useMemo(
+    () =>
+      withRemoteSink(
+        createLocalStorageStore(),
+        createSupabaseSink({
+          url: SUPABASE_URL,
+          anonKey: SUPABASE_ANON_KEY,
+          clientId: getClientId(),
+        }),
+      ),
+    [],
+  );
   const [started, setStarted] = useState(false);
   const [entered, setEntered] = useState(false);
   const [tab, setTab] = useState<Tab>("record");
